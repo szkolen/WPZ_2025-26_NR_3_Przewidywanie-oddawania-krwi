@@ -25,7 +25,7 @@ print("Informacje o zbiorze:")
 print(df.info(), "\n")
 
 # === 2. Wstępna analiza danych ===
-print("📊 Wstępna analiza danych:")
+print("Wstepna analiza danych:")
 print(df.describe(), "\n")
 
 print("Liczba braków danych:")
@@ -54,13 +54,23 @@ else:
     print(" Brak braków danych.")
 
 # === 4. Tworzenie nowych cech ===
-print("\n🧮 Tworzenie nowych cech...")
+print("\n Tworzenie nowych cech...")
 
 df["avg_blood_per_donation"] = df["Monetary (c.c. blood)"] / df["Frequency (times)"]
 df["donations_per_month"] = df["Frequency (times)"] / df["Time (months)"]
 df["recency_ratio"] = df["Recency (months)"] / df["Time (months)"]
 
 print(" Nowe cechy dodane:", list(df.columns), "\n")
+
+print("avg_blood_per_donation: ")
+print(f"{df["avg_blood_per_donation"][1]}", "\n")
+
+print("donations_per_month: ")
+print(f"{df["donations_per_month"][1]}", "\n")
+
+print("recency_ratio: ")
+print(f"{df["recency_ratio"][1]}", "\n")
+
 
 # === 5. Podział na zbiory ===
 print(" Podział na zbiory treningowy / walidacyjny / testowy...")

@@ -1,0 +1,19 @@
+
+================ RAPORT PRZYGOTOWANIA DANYCH ================
+Liczba rekordów po czyszczeniu: 533
+Liczba duplikatów usuniêtych: 215
+Braki danych: 0 (po czyszczeniu)
+Nowe cechy: avg_blood_per_donation, donations_per_month, recency_ratio
+
+Podzia³ danych:
+- Train: 373 rekordów
+- Validation: 80 rekordów
+- Test: 80 rekordów
+
+Rozk³ad zmiennej docelowej (ca³y zbiór):
+whether he/she donated blood in March 2007
+0    0.72
+1    0.28
+Name: proportion, dtype: float64
+
+==============================================================
