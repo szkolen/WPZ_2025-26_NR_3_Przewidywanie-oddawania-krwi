@@ -1,14 +1,13 @@
 
 == Podsumowanie modelowania ==
 Liczba rekordów (po czyszczeniu): 533
+
 Modele porównane: LogisticRegression, RandomForest
 
-Wyniki porównania (zbiór walidacyjny / test):
-             model  val_auc  val_accuracy  val_precision  val_recall  val_f1  test_auc  test_accuracy  test_precision  test_recall  test_f1
-LogisticRegression 0.764683         0.775       0.857143    0.260870    0.40  0.774687          0.750        0.750000     0.136364 0.230769
-      RandomForest 0.725019         0.725       0.518519    0.608696    0.56  0.726097          0.675        0.447368     0.772727 0.566667
+Wyniki porównania:
+             model  val_auc  val_accuracy  val_precision  val_recall  val_f1  val_mse  test_auc  test_accuracy  test_precision  test_recall  test_f1  test_mse
+LogisticRegression 0.764683         0.775       0.857143    0.260870    0.40 0.165208  0.774687          0.750        0.750000     0.136364 0.230769  0.163616
+      RandomForest 0.725019         0.725       0.518519    0.608696    0.56 0.193133  0.726097          0.675        0.447368     0.772727 0.566667  0.204982
 
-Wybrany model do dalszego użycia: LogisticRegression
-Plik modelu: best_model.joblib
-
-(model wybrany po najlepszym val_auc)
+Wybrany model: LogisticRegression
+Kryterium wyboru: najniższy błąd MSE na zbiorze walidacyjnym
